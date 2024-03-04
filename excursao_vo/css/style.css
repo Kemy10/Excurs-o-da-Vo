@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'sans-serif';
+}
+
+/* A PRIMEIRA PARTE DO PROJETO
+A PARTE DAS FOTOS E A APRESENTAÇÃO DO LUGAR */
+
+
+
+#pagina-home {
+    background: linear-gradient(rgba(44, 40, 40, 0.514), rgba(48, 42, 42, 0.5)), url(../pontos_turisticos/foto\ fundo.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.logo {
+    width: 150px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-principal ul {
+    list-style: none;
+}
+
+.menu-principal ul li {
+    display: inline-block;
+}
+
+.menu-principal ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+.menu-principal ul li a:hover {
+    background-color: white;
+    color: black
+}
+
+.menu-principal ul li .link-ativo {
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+h1 {
+    font-size: 70px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.btn {
+    border: 1px solid white;
+    padding: 10px 80px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+#pagina-home main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+/* SEGUNDA PARTE DO PROJETO
+A PARTE DO ONIBUS E OS ASSENTOS */
+
+h1 {
+    margin: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 100px;
+    background-color: beige;
+}
+
+/* .bus-layout {
+    text-align: center;
+    margin-top: 95px;
+} */
+
+.bus-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.seats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.seat[data-status="comprado"] {
+    background-color: #ccc;
+}
+
+.seat[data-selected="true"] {
+    background-color: orange;
+}
+
+.seat[data-status="livre"]::after {
+    content: "X";
+    color: red;
+}
+
+
+#container {
+    display: grid;
+    grid: repeat(4, 60px) / auto-flow 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 645px;
+    height: 208px;
+    place-content: center end;
+}
+
+
+#container>div {
+    background-color: #8ca0ff;
+    width: 30px;
+    height: 30px;
+}
+
+
+.comprado {
+    background-color: orange;
+}

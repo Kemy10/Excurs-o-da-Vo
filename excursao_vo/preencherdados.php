@@ -2,27 +2,22 @@
 
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
-$telefone = $_POST['telefone'];
+$numero = $_POST['telefone'];
+$banco = $_POST['banco'];
 
-function ReservaAssento($nome, $cpf, $telefone )
+function ReservaAssento($nome, $cpf, $numero, $banco )
 {
 
-    $conexao = new PDO("mysql:host=localhost;dbname=excursao_vo", "root", "");
+    $conexao = new PDO("mysql:host=localhost;dbname=escursao_vo", "root", "");
     $query = "INSERT INTO 
-                reserva (nome, telefone, cpf)
+                reserva (nome,  cpf,numero, banco)
               VALUE
-                ('" . $nome . "','" . $cpf . "','" . $telefone . "')";
+                ('" . $nome . "','" . $cpf . "','" . $numero . "','" . $banco . "')";
     $conexao->exec($query);
+   
 
-
-    if ($conexao->query($query) === TRUE) {
-        echo "Dados inseridos com sucesso!";
-    } else {
-        echo "Erro ao inserir dados: ";
-    }
-    
     
 }
 
 
-ReservaAssento($nome, $cpf, $telefone);
+ReservaAssento($nome, $cpf, $numero, $banco);
